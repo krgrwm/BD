@@ -7,7 +7,7 @@ function draw_grid(ba::BDGrid)
     for i in 1:ba.height
         for j in 1:ba.width
             c = get_cell(ba, (i, j)) ? "green":"black"
-            print(color(c, "*"))
+            print(color(c, " "))
         end
         print('\n')
     end
