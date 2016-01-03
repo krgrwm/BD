@@ -14,6 +14,11 @@ function draw_grid(ba::BDGrid)
 end
 
 function main()
+    if length(ARGS) != 3
+        print("parameter width, height, N")
+        return
+    end
+
     width, height, N = map(x->parse(Int, x), ARGS)
 
     bd = BDGrid(width, height)
