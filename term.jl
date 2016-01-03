@@ -1,10 +1,8 @@
 module term
 export color, characters, clear_display
 
-using Compat
-
-function color(c::ASCIIString, str::Union(ASCIIString, Char))
-    @compat colors = Dict{ASCIIString, ASCIIString}(
+function color(c::ASCIIString, str::Union{ASCIIString, Char})
+    colors = Dict{ASCIIString, ASCIIString}(
         "clear"  => "\033[0m",
         "black"  => "\033[40m",
         "red"    => "\033[41m",
